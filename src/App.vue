@@ -1,38 +1,48 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "@/components/HelloWorld.vue";
+// import HelloWorld from "@/components/HelloWorld.vue";
+import HeaderComponent from "@/components/HeaderComponent.vue";
+import MainComponent from "@/components/MainComponent.vue";
+const authorized = true;
 </script>
 
 <template>
   <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <div class="top-header">
+        <HeaderComponent msg="Crypto Transaction Tool" />
+      </div>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+      <div class="body">
+        <MainComponent
+          :isAuthorized=authorized
+          email-address="Sabin6120@gmail.com"
+        />
+      </div>
+      <!--      <nav>-->
+      <!--        <RouterLink to="/">Home</RouterLink>-->
+      <!--        <RouterLink to="/about">About</RouterLink>-->
+      <!--      </nav>-->
     </div>
   </header>
 
-  <RouterView />
+  <!--  <RouterView />-->
 </template>
 
 <style>
 @import "@/assets/base.css";
 
 #app {
-  max-width: 1280px;
+  background-color: #232228 !important;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  max-height: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
   margin: 0 auto;
-  padding: 2rem;
+  /*padding: 2rem;*/
 
   font-weight: normal;
 }
@@ -41,12 +51,14 @@ header {
   line-height: 1.5;
   max-height: 100vh;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.top-header {
+  padding-bottom: 2rem;
+  position: sticky;
+  top: 0;
 }
-
+.body {
+  padding: 0vw 4vw;
+}
 a,
 .green {
   text-decoration: none;
@@ -92,9 +104,9 @@ nav a:first-of-type {
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    /*display: grid;*/
+    /*grid-template-columns: 1fr 1fr;*/
+    /*padding: 0 2rem;*/
   }
 
   header {
