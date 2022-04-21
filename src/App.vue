@@ -39,7 +39,7 @@ const authorized = true;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   max-height: 100% !important;
-  max-width: 100vw !important;
+  max-width: 100% !important;
   overflow-x: hidden !important;
   margin: 0 auto;
   /*padding: 2rem;*/
@@ -57,7 +57,7 @@ header {
   top: 0;
 }
 .body {
-  padding: 0vw 4vw;
+  padding: 0.05vw 5vw;
 }
 a,
 .green {
