@@ -14,21 +14,27 @@ const validAddress = props.wallet.address != null;
       <table>
         <tr>
           <td>
-            <select
-              :v-model="props.wallet.coin"
-            >
-              <option v-for="(option, index) in props.supportedCoins" :value="option" :key="option+index">
+            <select class="dropdown" :v-model="props.wallet.coin">
+              <option
+                v-for="(option, index) in props.supportedCoins"
+                :value="option"
+                :key="option + index"
+              >
                 {{ option }}
               </option>
             </select>
           </td>
           <input
+            class="inputBox"
             v-model="props.wallet.address"
             placeholder="Input Wallet Address for Coin :"
           />
           <td>
-            <p v-if="validAddress"> Valid Address</p>
-            <p class="error" v-else>Invalid Address</p>
+            <p class="label" v-if="validAddress">Valid Address</p>
+            <p class="error-label" v-else>Invalid Address</p>
+          </td>
+          <td>
+            <button class="btn">Validate address</button>
           </td>
         </tr>
       </table>
@@ -62,32 +68,28 @@ const validAddress = props.wallet.address != null;
   max-width: 90vw;
   justify-content: space-around;
   align-items: flex-start;
-  /*-webkit-box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);*/
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
-  /*-webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);*/
-  transition: all 0.0s cubic-bezier(0.685, 0.0473, 0.346, 1);
-  /*-webkit-box-sizing: border-box;*/
+  transition: all 0s cubic-bezier(0.685, 0.0473, 0.346, 1);
   box-sizing: border-box;
-  /*display: table-row;*/
   vertical-align: inherit;
   border-color: inherit;
-  /*color: #ddd;*/
   text-align: left;
   font-size: 0.9rem;
   max-height: 20px;
   display: table;
-  /*width: 100%;*/
-  /*margin-bottom: 1rem;*/
-  /*color: #212529;*/
-  /*border-collapse: collapse;*/
-  /*border-collapse: separate;*/
   text-indent: initial;
   border-spacing: 2px;
 }
-.error {
+.error-label {
   text-decoration: none;
   color: hsla(0, 100%, 50%);
   transition: 0.4s;
+  padding: 1rem;
+  font-size: large;
 }
-
+.label {
+  transition: 0.4s;
+  padding: 1rem;
+  font-size: large;
+}
 </style>

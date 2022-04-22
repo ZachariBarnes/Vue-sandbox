@@ -31,7 +31,7 @@ function addWallet() {
         </div>
       </div>
       <div>
-        <button class="add-btn" @onClick="addWallet">➕ Add New Wallet</button>
+        <button class="btn" @onClick="addWallet">➕ Add New Wallet</button>
       </div>
     </div>
     <div class="content" v-else>
