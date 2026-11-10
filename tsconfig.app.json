@@ -1,5 +1,5 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
   "include": [
     "env.d.ts",
     "src/**/*",
@@ -10,7 +10,7 @@
   ],
   "compilerOptions": {
     "composite": true,
-    "baseUrl": "./vue-sandbox",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }

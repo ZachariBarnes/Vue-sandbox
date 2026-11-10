@@ -21,10 +21,14 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
+## Requirements
+
+Use Node.js 22.12 or newer on the Node 22 release line, Node 24, or Node 26+. Node 24 LTS is recommended. The Vite and Vitest toolchain is not compatible with the original Node 16 setup.
+
 ## Project Setup
 
 ```sh
-npm install
+npm ci
 ```
 
 ### Compile and Hot-Reload for Development

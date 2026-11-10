@@ -29,3 +29,5 @@ coverage
 
 #env files and Secrets
 .env
+# TypeScript project build cache
+*.tsbuildinfo
